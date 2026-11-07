@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>r星每日大赛mdrs聚集地入口-每日大赛mdrs参赛入口与聚集地导航_r星每日大赛报名与赛程</title>
+<meta name="description" content="r星每日大赛mdrs聚集地入口专题页，聚合每日大赛mdrs报名入口、参赛流程、赛程时间、聚集地导航与玩家讨论，帮你快速找到r星每日大赛mdrs聚集地入口，了解每日赛制与最新动态。">
+<meta name="keywords" content="r星每日大赛mdrs聚集地入口,每日大赛mdrs,mdrs聚集地,r星每日大赛入口,mdrs报名入口">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2313182b'/><text x='32' y='43' font-size='30' font-family='Arial' font-weight='bold' fill='%2364e2a5' text-anchor='middle'>R</text></svg>">
+<style>
+:root{
+  --bg:#0d1020;
+  --bg2:#131832;
+  --card:#181d3a;
+  --card2:#1e2448;
+  --line:#2a3160;
+  --txt:#e8ecff;
+  --txt2:#a7b0d8;
+  --acc:#64e2a5;
+  --acc2:#7aa2ff;
+  --warn:#ffcf6b;
+  --radius:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:linear-gradient(180deg,#0b0e1c 0%,#0d1020 40%,#0a0d1a 100%);
+  color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+/* nav */
+.rs-nav{position:sticky;top:0;z-index:50;background:rgba(13,16,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.rs-nav-in{display:flex;align-items:center;gap:18px;height:62px;max-width:1200px;margin:0 auto;padding:0 18px}
+.rs-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:17px;letter-spacing:.5px;white-space:nowrap}
+.rs-logo-i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;color:#0b0e1c;font-weight:900}
+.rs-nav-links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+.rs-nav-links::-webkit-scrollbar{display:none}
+.rs-nav-links a{padding:7px 11px;border-radius:8px;font-size:14px;color:var(--txt2);white-space:nowrap;transition:.2s}
+.rs-nav-links a:hover{background:var(--card);color:var(--acc)}
+.rs-nav-cta{padding:8px 16px;border-radius:9px;background:linear-gradient(135deg,var(--acc),#3fc98a);color:#06120c;font-weight:700;font-size:14px;white-space:nowrap}
+/* banner */
+.rs-hero{position:relative;overflow:hidden;padding:56px 0 46px;border-bottom:1px solid var(--line)}
+.rs-hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 240px at 12% 10%,rgba(100,226,165,.16),transparent 70%),
+  radial-gradient(520px 260px at 88% 0%,rgba(122,162,255,.18),transparent 70%);pointer-events:none}
+.rs-hero-in{position:relative;display:grid;grid-template-columns:1.35fr .9fr;gap:34px;align-items:center}
+.rs-hero h1{font-size:38px;line-height:1.28;letter-spacing:.5px;margin-bottom:16px}
+.rs-hero h1 em{font-style:normal;color:var(--acc)}
+.rs-hero p.lead{color:var(--txt2);font-size:15.5px;margin-bottom:8px}
+.rs-badge-row{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 20px}
+.rs-badge{font-size:12.5px;padding:5px 11px;border-radius:20px;background:rgba(100,226,165,.12);color:var(--acc);border:1px solid rgba(100,226,165,.28)}
+.rs-badge.b2{background:rgba(122,162,255,.12);color:var(--acc2);border-color:rgba(122,162,255,.28)}
+.rs-search{display:flex;gap:8px;max-width:520px}
+.rs-search input{flex:1;padding:12px 15px;border-radius:11px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:14px;outline:none}
+.rs-search input:focus{border-color:var(--acc)}
+.rs-search button{padding:12px 22px;border:none;border-radius:11px;background:linear-gradient(135deg,var(--acc),#3fc98a);color:#06120c;font-weight:700;font-size:14px;cursor:pointer}
+.rs-quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.rs-quick a{font-size:13px;padding:7px 13px;border-radius:9px;background:var(--card);border:1px solid var(--line);color:var(--txt2);transition:.2s}
+.rs-quick a:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-2px)}
+.rs-hero-card{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.rs-hero-card h3{font-size:15px;color:var(--acc);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.rs-hero-card h3 span{font-size:12px;color:var(--txt2);font-weight:400}
+.rs-mini{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.07);font-size:13.5px}
+.rs-mini:last-child{border-bottom:none}
+.rs-mini b{font-weight:600}
+.rs-mini span{color:var(--txt2);font-size:12.5px}
+/* section */
+.rs-sec{padding:48px 0}
+.rs-sec.alt{background:linear-gradient(180deg,rgba(24,29,58,.5),transparent)}
+.rs-h2{font-size:25px;letter-spacing:.4px;margin-bottom:8px;display:flex;align-items:center;gap:11px}
+.rs-h2::before{content:"";width:5px;height:22px;border-radius:3px;background:linear-gradient(180deg,var(--acc),var(--acc2))}
+.rs-sub{color:var(--txt2);font-size:14px;margin-bottom:26px}
+/* intro */
+.rs-intro{display:grid;grid-template-columns:1.5fr 1fr;gap:26px}
+.rs-intro-main{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.rs-intro-main p{color:#cdd4f2;margin-bottom:14px;font-size:14.8px;text-align:justify}
+.rs-intro-main p b{color:var(--acc)}
+.rs-side{display:grid;gap:14px}
+.rs-side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.rs-side-card h4{font-size:14.5px;color:var(--acc2);margin-bottom:10px}
+.rs-side-card ul{list-style:none}
+.rs-side-card li{font-size:13.5px;color:var(--txt2);padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);display:flex;justify-content:space-between}
+.rs-side-card li:last-child{border:none}
+/* cards grid */
+.rs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rs-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.22s;display:flex;flex-direction:column}
+.rs-card:hover{transform:translateY(-4px);border-color:rgba(100,226,165,.45);box-shadow:var(--shadow)}
+.rs-thumb{height:104px;background:linear-gradient(135deg,#1f2a55,#28306b);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.55);letter-spacing:2px;position:relative}
+.rs-thumb::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(100,226,165,.22),transparent 60%)}
+.rs-thumb.t2{background:linear-gradient(135deg,#2b2350,#1d3a5c)}
+.rs-thumb.t3{background:linear-gradient(135deg,#143a35,#254a6b)}
+.rs-thumb.t4{background:linear-gradient(135deg,#3a2b1f,#2a2a55)}
+.rs-card-body{padding:15px 16px 17px;display:flex;flex-direction:column;flex:1}
+.rs-card-body h3{font-size:15.5px;margin-bottom:8px}
+.rs-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+.rs-tag{font-size:11.5px;padding:2px 8px;border-radius:6px;background:rgba(122,162,255,.14);color:#a8c0ff}
+.rs-tag.g{background:rgba(100,226,165,.14);color:var(--acc)}
+.rs-card-body p{font-size:13.3px;color:var(--txt2);flex:1;margin-bottom:12px}
+.rs-meta{display:flex;justify-content:space-between;font-size:12.3px;color:#8e97c2;border-top:1px solid rgba(255,255,255,.06);padding-top:10px}
+.rs-meta b{color:var(--warn);font-weight:600}
+/* update list */
+.rs-updates{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.rs-up{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.2s}
+.rs-up:hover{border-color:rgba(122,162,255,.45)}
+.rs-up-time{flex-shrink:0;font-size:12.3px;color:var(--acc);min-width:76px;font-weight:600}
+.rs-up div p{font-size:13.6px;color:#c6cdec}
+.rs-up div p b{color:var(--txt)}
+/* cats */
+.rs-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rs-cat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;transition:.2s;text-align:left}
+.rs-cat:hover{transform:translateY(-3px);border-color:var(--acc);background:var(--card2)}
+.rs-cat i{display:block;font-style:normal;font-size:19px;margin-bottom:8px}
+.rs-cat strong{display:block;font-size:14.5px;margin-bottom:4px}
+.rs-cat span{font-size:12.5px;color:var(--txt2)}
+/* article */
+.rs-article{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 32px}
+.rs-article h3{font-size:18px;margin:22px 0 10px;color:var(--acc)}
+.rs-article h3:first-child{margin-top:0}
+.rs-article p{color:#cbd2ef;font-size:14.8px;margin-bottom:13px;text-align:justify}
+.rs-article p b{color:var(--txt)}
+.rs-article ul{margin:0 0 14px 20px;color:#cbd2ef;font-size:14.5px}
+.rs-article li{margin-bottom:7px}
+/* guide */
+.rs-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rs-gcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.rs-gcard b{display:block;font-size:15px;margin-bottom:8px;color:var(--acc2)}
+.rs-gcard p{font-size:13.4px;color:var(--txt2)}
+/* faq */
+.rs-faq{display:grid;gap:12px}
+.rs-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 18px}
+.rs-faq details[open]{border-color:rgba(100,226,165,.4)}
+.rs-faq summary{cursor:pointer;padding:15px 0;font-size:14.8px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.rs-faq summary::-webkit-details-marker{display:none}
+.rs-faq summary::after{content:"＋";color:var(--acc);font-weight:700}
+.rs-faq details[open] summary::after{content:"－"}
+.rs-faq .ans{padding:0 0 16px;font-size:14px;color:var(--txt2);border-top:1px dashed rgba(255,255,255,.08);padding-top:12px;text-align:justify}
+/* comments */
+.rs-comments{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rs-cm{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+.rs-cm-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.rs-cm-h b{font-size:13.6px;color:var(--acc2)}
+.rs-cm-h span{font-size:12px;color:#7d86ad}
+.rs-cm p{font-size:13.4px;color:#c3cbea}
+/* news */
+.rs-news{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.rs-new{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:.2s}
+.rs-new:hover{border-color:rgba(122,162,255,.45);transform:translateY(-3px)}
+.rs-new span{font-size:12px;color:var(--acc)}
+.rs-new h4{font-size:15px;margin:7px 0 8px}
+.rs-new p{font-size:13.3px;color:var(--txt2)}
+/* footer */
+.rs-footer{border-top:1px solid var(--line);padding:40px 0 30px;margin-top:20px;background:#0a0d1a}
+.rs-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.rs-foot-grid h4{font-size:14px;margin-bottom:12px;color:var(--acc)}
+.rs-foot-grid p,.rs-foot-grid a{font-size:13px;color:var(--txt2);display:block;margin-bottom:7px}
+.rs-foot-grid a:hover{color:var(--acc)}
+.rs-copy{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:12.5px;color:#6f789e;text-align:center;line-height:1.9}
+/* responsive */
+@media(max-width:960px){
+  .rs-hero-in{grid-template-columns:1fr}
+  .rs-hero h1{font-size:29px}
+  .rs-intro,.rs-grid,.rs-guide,.rs-cats{grid-template-columns:1fr 1fr}
+  .rs-foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .rs-nav-links{display:none}
+  .rs-hero{padding:36px 0 30px}
+  .rs-hero h1{font-size:23px}
+  .rs-grid,.rs-guide,.rs-cats,.rs-intro,.rs-comments,.rs-news,.rs-updates{grid-template-columns:1fr}
+  .rs-article{padding:22px 18px}
+  .rs-foot-grid{grid-template-columns:1fr}
+  .rs-search{flex-direction:column}
+  .rs-search button{width:100%}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<nav class="rs-nav">
+  <div class="rs-nav-in">
+    <a href="/#rs-hero" class="rs-logo"><span class="rs-logo-i">R</span>MDRS聚集地</a>
+    <div class="rs-nav-links">
+      <a href="/#rs-hero">首页</a>
+      <a href="/#rs-hot">热门赛事</a>
+      <a href="/#rs-update">每日更新</a>
+      <a href="/#rs-cat">入口分类</a>
+      <a href="/#rs-deep">深度解析</a>
+      <a href="/#rs-guide">参赛指南</a>
+      <a href="/#rs-faq">常见问题</a>
+      <a href="/#rs-news">赛事资讯</a>
+      <a href="/#rs-comment">玩家评论</a>
+    </div>
+    <a href="/#rs-cat" class="rs-nav-cta">进入聚集地</a>
+  </div>
+</nav>
+
+<header class="rs-hero" id="rs-hero">
+  <div class="wrap rs-hero-in">
+    <div>
+      <h1>r星每日大赛mdrs聚集地入口：一站式找到<em>每日大赛</em>报名与赛程</h1>
+      <p class="lead">聚合 r星每日大赛 mdrs 聚集地入口、每日赛程、报名流程与玩家讨论，入口清晰、分类直观。</p>
+      <p class="lead">无论你是第一次寻找 mdrs 聚集地，还是每天固定参赛的老玩家，都能在这里快速定位当日赛题与最新动态。</p>
+      <div class="rs-badge-row">
+        <span class="rs-badge">每日赛程同步</span>
+        <span class="rs-badge b2">入口分类导航</span>
+        <span class="rs-badge">参赛流程说明</span>
+        <span class="rs-badge b2">玩家聚集讨论</span>
+      </div>
+      <form class="rs-search" onsubmit="return false">
+        <input type="text" placeholder="搜索：mdrs聚集地入口 / 每日大赛赛程 / 报名方式">
+        <button type="button">搜索入口</button>
+      </form>
+      <div class="rs-quick">
+        <a href="/#rs-hot">今日热门赛事</a>
+        <a href="/#rs-update">最新更新动态</a>
+        <a href="/#rs-cat">入口分类总览</a>
+        <a href="/#rs-guide">新手指南</a>
+        <a href="/#rs-faq">常见问题</a>
+        <a href="/#rs-news">赛事资讯</a>
+        <a href="/#rs-comment">玩家评论</a>
+      </div>
+    </div>
+    <aside class="rs-hero-card">
+      <h3>今日聚集地速览 <span>2026-11-07</span></h3>
+      <div class="rs-mini"><b>每日大赛第 312 期</b><span>进行中</span></div>
+      <div class="rs-mini"><b>mdrs 聚集地入口</b><span>已开放</span></div>
+      <div class="rs-mini"><b>报名通道</b><span>全天可进</span></div>
+      <div class="rs-mini"><b>今日参与人数</b><span>模拟 8,642</span></div>
+      <div class="rs-mini"><b>赛题更新时间</b><span>每日 09:00</span></div>
+      <div class="rs-mini"><b>聚集地讨论热度</b><span>较高</span></div>
+    </aside>
+  </div>
+</header>
+
+<main>
+
+<section class="rs-sec" id="rs-intro">
+  <div class="wrap">
+    <h2 class="rs-h2">r星每日大赛mdrs聚集地入口是什么</h2>
+    <p class="rs-sub">先弄清入口逻辑，再决定从哪一栏开始浏览，能少走很多弯路。</p>
+    <div class="rs-intro">
+      <div class="rs-intro-main">
+        <p><b>r星每日大赛mdrs聚集地入口</b>，本质上是围绕“每日大赛”这一固定节奏赛事形成的入口聚合页。用户搜索这个词，通常不是想看一篇泛泛的介绍，而是想知道：今天的大赛从哪里进、报名在哪里点、赛题在哪里看、聚集地里大家都在讨论什么。因此本页把入口、赛程、规则、讨论四件事放在同一条浏览动线上，减少来回跳转。</p>
+        <p>所谓 <b>mdrs 聚集地</b>，可以理解为玩家集中获取每日赛事信息、交流参赛心得、查看往期结果的区域。每日大赛的特点是节奏快、周期短、每天都有新内容，所以入口的稳定性比内容深度更重要。一个清晰的入口页，应该让你在三步之内完成“找到入口—确认赛程—进入参赛”的流程。</p>
+        <p>本页适合三类人：第一次接触每日大赛、想搞清楚入口在哪的新玩家；已经参赛但想找聚集地讨论氛围的老玩家；以及偶尔路过、想了解这个赛事值不值得每天花时间的观望者。页面提供分类入口、赛程速览、规则解析、FAQ 与玩家评论，方便你按需取用。</p>
+        <p>为什么值得收藏？因为每日大赛的入口和赛程会随日期变化，收藏一个结构稳定的聚合页，比每次重新搜索更省时间。本站不提供任何非官方通道，只做信息整理与导航说明，具体参赛仍以官方页面为准。建议把本页加入书签，每天固定时间打开一次即可。</p>
+      </div>
+      <div class="rs-side">
+        <div class="rs-side-card">
+          <h4>入口速查</h4>
+          <ul>
+            <li><span>今日赛题入口</span><b>已开放</b></li>
+            <li><span>报名信息页</span><b>可查看</b></li>
+            <li><span>往期结果归档</span><b>可回看</b></li>
+            <li><span>聚集地讨论区</span><b>热度高</b></li>
+            <li><span>规则说明</span><b>已更新</b></li>
+          </ul>
+        </div>
+        <div class="rs-side-card">
+          <h4>适合人群</h4>
+          <ul>
+            <li><span>新手找入口</span><b>推荐</b></li>
+            <li><span>老玩家看赛程</span><b>推荐</b></li>
+            <li><span>围观了解规则</span><b>适合</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec alt" id="rs-hot">
+  <div class="wrap">
+    <h2 class="rs-h2">热门赛事与聚集地推荐</h2>
+    <p class="rs-sub">以下为每日大赛相关的内容卡片，标题与看点均为模拟整理，便于快速了解聚集地里的常见话题方向。</p>
+    <div class="rs-grid">
+      <article class="rs-card">
+        <div class="rs-thumb">每日主赛</div>
+        <div class="rs-card-body">
+          <h3>每日大赛主赛入口</h3>
+          <div class="rs-tags"><span class="rs-tag g">主赛</span><span class="rs-tag">每日更新</span><span class="rs-tag">入口</span></div>
+          <p>每天固定时间开放的主赛通道，适合想稳定参赛的玩家，入口页会同步当日赛题说明。</p>
+          <div class="rs-meta"><span>热度 9.6</span><b>进行中</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb t2">聚集地</div>
+        <div class="rs-card-body">
+          <h3>mdrs 聚集地讨论区</h3>
+          <div class="rs-tags"><span class="rs-tag">讨论</span><span class="rs-tag g">聚集地</span><span class="rs-tag">交流</span></div>
+          <p>玩家集中交流每日赛题思路的地方，常有经验分享与赛后复盘，适合找氛围。</p>
+          <div class="rs-meta"><span>热度 9.2</span><b>活跃</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb t3">新手向</div>
+        <div class="rs-card-body">
+          <h3>新手第一次进入口</h3>
+          <div class="rs-tags"><span class="rs-tag g">入门</span><span class="rs-tag">流程</span><span class="rs-tag">说明</span></div>
+          <p>从注册到提交的完整流程梳理，重点解释容易卡住的步骤，减少首次参赛的困惑。</p>
+          <div class="rs-meta"><span>热度 8.8</span><b>推荐</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb t4">赛程</div>
+        <div class="rs-card-body">
+          <h3>每日赛程时间表</h3>
+          <div class="rs-tags"><span class="rs-tag">赛程</span><span class="rs-tag g">时间</span><span class="rs-tag">提醒</span></div>
+          <p>按天整理的赛程节点，帮助你判断什么时候看入口、什么时候提交更从容。</p>
+          <div class="rs-meta"><span>热度 8.5</span><b>已更新</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb t2">规则</div>
+        <div class="rs-card-body">
+          <h3>参赛规则速读版</h3>
+          <div class="rs-tags"><span class="rs-tag g">规则</span><span class="rs-tag">要点</span><span class="rs-tag">避坑</span></div>
+          <p>把冗长规则压缩成几条关键点，适合进聚集地之前先花三分钟扫一遍。</p>
+          <div class="rs-meta"><span>热度 8.3</span><b>实用</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb">往期</div>
+        <div class="rs-card-body">
+          <h3>往期大赛结果回看</h3>
+          <div class="rs-tags"><span class="rs-tag">归档</span><span class="rs-tag g">复盘</span><span class="rs-tag">参考</span></div>
+          <p>通过往期结果了解赛题的常见方向与难度区间，对新手判断投入时间很有帮助。</p>
+          <div class="rs-meta"><span>热度 8.0</span><b>可回看</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb t3">移动端</div>
+        <div class="rs-card-body">
+          <h3>手机端访问入口说明</h3>
+          <div class="rs-tags"><span class="rs-tag g">移动端</span><span class="rs-tag">适配</span><span class="rs-tag">入口</span></div>
+          <p>很多玩家在手机上找 mdrs 聚集地入口，这里整理了移动端的浏览顺序建议。</p>
+          <div class="rs-meta"><span>热度 7.9</span><b>常用</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb t4">节奏</div>
+        <div class="rs-card-body">
+          <h3>每日大赛节奏怎么跟</h3>
+          <div class="rs-tags"><span class="rs-tag">节奏</span><span class="rs-tag g">时间管理</span><span class="rs-tag">建议</span></div>
+          <p>每天参赛最怕时间碎片化，这个卡片整理了固定时间点打开入口的习惯建议。</p>
+          <div class="rs-meta"><span>热度 7.8</span><b>经验向</b></div>
+        </div>
+      </article>
+      <article class="rs-card">
+        <div class="rs-thumb">对比</div>
+        <div class="rs-card-body">
+          <h3>主赛与子赛的区别</h3>
+          <div class="rs-tags"><span class="rs-tag">对比</span><span class="rs-tag g">选择</span><span class="rs-tag">说明</span></div>
+          <p>聚集地里经常有人问主赛和子赛该选哪个，这里把差异讲清楚，方便做选择。</p>
+          <div class="rs-meta"><span>热度 7.7</span><b>解析</b></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec" id="rs-update">
+  <div class="wrap">
+    <h2 class="rs-h2">最新更新与每日动态</h2>
+    <p class="rs-sub">当前时间 2026 年 11 月 7 日，以下为聚集地每日动态的模拟整理，帮助判断什么时候该看入口。</p>
+    <div class="rs-updates">
+      <div class="rs-up"><span class="rs-up-time">11-07 09:00</span><div><p><b>今日赛题已发布</b>：mdrs 聚集地入口同步更新，建议先看规则再看题。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-07 08:40</span><div><p><b>聚集地讨论升温</b>：关于今日赛题方向的讨论帖明显增多。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-06 21:15</span><div><p><b>往期结果归档完成</b>：前一天的参赛记录已可回看。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-06 18:30</span><div><p><b>入口页面小幅调整</b>：分类按钮位置更靠前，移动端更好找。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-06 12:00</span><div><p><b>新手指引更新</b>：补充了首次进入聚集地的浏览顺序说明。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-05 20:45</span><div><p><b>规则要点整理</b>：把容易忽略的提交细节单独列出。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-05 10:20</span><div><p><b>赛程提醒上线</b>：每日固定时间点提示查看入口与赛题。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-04 19:10</span><div><p><b>玩家反馈汇总</b>：多数反馈集中在入口稳定性和赛程清晰度。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-04 09:30</span><div><p><b>移动端体验优化</b>：手机浏览聚集地时卡片间距更合理。</p></div></div>
+      <div class="rs-up"><span class="rs-up-time">11-03 16:00</span><div><p><b>常见问题补充</b>：新增关于报名与提交时间差的问答。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec alt" id="rs-cat">
+  <div class="wrap">
+    <h2 class="rs-h2">入口分类导航</h2>
+    <p class="rs-sub">按需求选择入口方向，不同分类对应不同的浏览目标。</p>
+    <div class="rs-cats">
+      <a href="/#rs-hot" class="rs-cat"><i>🎯</i><strong>主赛入口</strong><span>每日固定开放的参赛通道</span></a>
+      <a href="/#rs-update" class="rs-cat"><i>🗓️</i><strong>赛程时间</strong><span>按天查看节点与提醒</span></a>
+      <a href="/#rs-guide" class="rs-cat"><i>🧭</i><strong>新手指引</strong><span>首次进入聚集地的顺序</span></a>
+      <a href="/#rs-deep" class="rs-cat"><i>📖</i><strong>规则解析</strong><span>关键点与易错处说明</span></a>
+      <a href="/#rs-comment" class="rs-cat"><i>💬</i><strong>聚集地讨论</strong><span>玩家交流与赛后复盘</span></a>
+      <a href="/#rs-faq" class="rs-cat"><i>❓</i><strong>常见问题</strong><span>入口、报名、提交答疑</span></a>
+      <a href="/#rs-news" class="rs-cat"><i>📰</i><strong>赛事资讯</strong><span>每日动态与变化整理</span></a>
+      <a href="/#rs-intro" class="rs-cat"><i>🗂️</i><strong>往期归档</strong><span>历史赛题与结果回看</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec" id="rs-deep">
+  <div class="wrap">
+    <h2 class="rs-h2">深度解析：每日大赛与 mdrs 聚集地的实际体验</h2>
+    <p class="rs-sub">从入口结构、赛制节奏、聚集地氛围三个角度，拆解这个关键词背后的真实需求。</p>
+    <div class="rs-article">
+      <h3>一、为什么“入口”会成为核心搜索需求</h3>
+      <p>搜索 <b>r星每日大赛mdrs聚集地入口</b> 的人，动机通常非常直接：他们已经在别处听说过这个每日赛事，或者之前参与过，但入口位置变了、记忆模糊了，需要重新定位。与“介绍型”关键词不同，这类词带有明确的行为指向，用户希望点进来之后立刻看到可点击的入口说明，而不是先读两千字背景故事。因此一个合格的落地页，必须把入口信息放在首屏和靠前模块。</p>
+      <p>另一个原因是每日大赛的节奏。赛事每天更新，赛题、时间、报名状态都可能变化，用户很难记住固定网址或路径。这种情况下，一个结构稳定的聚合页就成了“中转站”：不管今天赛题是什么，先来这里，再根据当日提示进入具体页面。这也是为什么本页把入口速查、赛程时间、分类导航放在最前面，而不是先讲历史。</p>
+      <h3>二、每日大赛的赛制节奏与参与体验</h3>
+      <p>从体验角度看，每日大赛的核心特征是“短周期 + 高频次”。一天一轮，意味着单轮的投入时间被压缩，玩家需要在有限时间内理解赛题、做出判断、完成提交。这种节奏对老玩家友好，因为他们已经形成固定的参赛习惯；对新手则有一定门槛，容易在规则细节上卡住。因此本页在深度解析里专门拆出规则要点，帮助新手在进入聚集地之前先建立基本认知。</p>
+      <p>节奏快也带来一个副作用：信息容易过载。聚集地里每天都有新帖子、新讨论、新结果，如果全看，时间成本很高。更合理的方式是固定几个时间点，比如早上看赛题、中午看讨论、晚上看结果，其余时间不必频繁刷新。本页的“最新更新”模块就是为这种习惯设计的，用简短摘要替代长文，让你快速判断今天值不值得深入。</p>
+      <h3>三、mdrs 聚集地的社区氛围</h3>
+      <p><b>mdrs 聚集地</b>的价值不只是入口，更在于“人”。每日大赛的参与者往往有相似的节奏，讨论区里既有认真复盘的技术帖，也有轻松的吐槽和安利。对新手来说，聚集地能提供一种“我不是一个人在摸索”的安心感；对老玩家来说，这里是交流经验、验证思路的地方。页面中的评论模块模拟了这种氛围，涵盖推荐、吐槽、期待、分析等多种语气，尽量还原真实社区的多面性。</p>
+      <p>需要注意的是，聚集地信息质量参差不齐，个别说法可能带有主观判断。建议把讨论区当作参考而非标准答案，遇到关键规则仍以官方说明为准。本页在多个位置重复了这一点，目的不是降低可信度，而是帮助读者建立更稳妥的信息使用习惯。</p>
+      <h3>四、同类内容比较与适合人群</h3>
+      <p>市面上类似的“入口聚合”页面不少，差异主要体现在三点：一是入口是否分层，能不能区分主赛、子赛、往期；二是信息是否按时间组织，能不能让人一眼看出今天的状态；三是是否有社区视角，而不只是冷冰冰的链接列表。本页在这三点上做了平衡，既保留导航效率，也补充了解析与讨论。</p>
+      <p>适合人群方面，如果你只是想快速找到入口，直接看首屏和分类导航即可；如果你想理解赛制再决定是否长期参与，可以读深度解析和 FAQ；如果你已经在参赛，评论和资讯模块更贴近你的日常。不同需求对应不同阅读路径，这也是本页不把所有内容堆在首屏的原因。</p>
+      <h3>五、搜索这个词的人通常还想知道什么</h3>
+      <p>除了入口位置，用户还常关心：每日大赛是否每天都有、报名是否需要额外条件、聚集地里能不能找到往期结果、移动端能不能正常访问、入口失效时怎么办。这些问题在 FAQ 中都有对应回答。把这些长尾疑问覆盖到，页面的收录价值才会更完整，而不是只回答一个“入口在哪”。</p>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec alt" id="rs-guide">
+  <div class="wrap">
+    <h2 class="rs-h2">参赛与浏览指南</h2>
+    <p class="rs-sub">不涉及任何非官方操作，只说明页面本身的浏览方式和信息使用建议。</p>
+    <div class="rs-guide">
+      <div class="rs-gcard"><b>第一步：确认日期</b><p>每日大赛按天更新，先看页面顶部速览里的日期，避免参考到过期信息。</p></div>
+      <div class="rs-gcard"><b>第二步：看入口分类</b><p>根据你是找主赛、看赛程还是查往期，从分类导航进入对应模块，减少无效浏览。</p></div>
+      <div class="rs-gcard"><b>第三步：读规则要点</b><p>首次参赛建议先看规则解析，重点留意提交时间与格式要求，避免临门一脚出错。</p></div>
+      <div class="rs-gcard"><b>第四步：逛聚集地讨论</b><p>讨论区适合了解当日氛围和常见思路，但要注意区分主观经验与官方规则。</p></div>
+      <div class="rs-gcard"><b>第五步：收藏本页</b><p>固定入口比每次重新搜索更省时间，建议加入书签并按固定时间点访问。</p></div>
+      <div class="rs-gcard"><b>移动端建议</b><p>手机浏览时优先使用分类导航和速览卡，长文解析可以留到时间充裕时再看。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec" id="rs-faq">
+  <div class="wrap">
+    <h2 class="rs-h2">常见问题 FAQ</h2>
+    <p class="rs-sub">围绕入口、赛程、报名与聚集地的高频疑问整理。</p>
+    <div class="rs-faq">
+      <details open>
+        <summary>r星每日大赛mdrs聚集地入口每天都会变化吗？</summary>
+        <div class="ans">入口的“位置”通常相对稳定，但每日大赛的赛题和状态会随日期更新，所以页面内容每天不同。建议先看首屏速览确认当天状态，再进入具体模块。如果你发现某个链接无法打开，优先回到本页的分类导航重新定位，而不是反复刷新旧地址。入口类信息以当日页面为准，收藏本页可以减少找入口的时间。</div>
+      </details>
+      <details>
+        <summary>第一次参加每日大赛，应该先看哪一部分？</summary>
+        <div class="ans">建议顺序是：先看内容简介建立基本认知，再看规则解析里的要点，最后进聚集地讨论感受氛围。不要一上来就扎进讨论区，因为讨论内容主观性较强，新手容易被零散说法带偏。等你对赛制有基本判断之后，再结合讨论区的经验帖，效率会更高，也更不容易在提交环节出错。</div>
+      </details>
+      <details>
+        <summary>mdrs 聚集地和每日大赛入口是同一个东西吗？</summary>
+        <div class="ans">不完全相同。入口更偏向“通道”，解决的是从哪里进、怎么报名的问题；聚集地更偏向“社区”，解决的是信息交流和经验分享。两者常常被放在一起搜索，是因为用户既想找到入口，也想看看别人怎么参与。本页把两者放在同一浏览动线里，但模块上做了区分，方便你按需取用。</div>
+      </details>
+      <details>
+        <summary>每日大赛适合每天投入很多时间吗？</summary>
+        <div class="ans">从节奏设计看，每日大赛更适合“固定时间、适度投入”的参与方式。每天一轮意味着单轮时间有限，过度投入反而容易疲劳。比较稳妥的做法是设定几个固定时间点，比如早上看赛题、中午看讨论、晚上看结果，其余时间正常生活。聚集地里的高频讨论可以参考，但不必每条都跟，信息筛选能力比信息数量更重要。</div>
+      </details>
+      <details>
+        <summary>往期结果在哪里看，有什么参考价值？</summary>
+        <div class="ans">往期结果通常归档在入口页的对应模块中，本页的“最新更新”和分类导航都提供了进入路径。参考价值主要有两点：一是了解赛题的常见方向和难度区间，判断自己是否适合长期参与；二是观察结果公布的时间规律，安排自己的查看节奏。需要注意的是，往期结果不代表未来赛题，只作参考，不宜过度推断。</div>
+      </details>
+      <details>
+        <summary>手机上访问聚集地入口体验如何？</summary>
+        <div class="ans">本页做了移动端适配，导航会收起、卡片改为单列、搜索框改为纵向排列，保证小屏下依然能看清入口和速览信息。手机上建议优先使用首屏速览和分类导航，长文解析可以留到时间充裕时再看。如果遇到排版拥挤，可以适当放大字号或横屏浏览，阅读体验会更舒服。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec alt" id="rs-comment">
+  <div class="wrap">
+    <h2 class="rs-h2">玩家评论与聚集地讨论</h2>
+    <p class="rs-sub">以下为模拟评论，语气涵盖推荐、吐槽、期待与分析，尽量贴近真实社区氛围。</p>
+    <div class="rs-comments">
+      <div class="rs-cm"><div class="rs-cm-h"><b>夜航的猫</b><span>11-06</span></div><p>找了两天入口，最后发现还是这种聚合页最省事，分类清楚，不用来回翻。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>半糖不加冰</b><span>11-06</span></div><p>每日大赛节奏是真的快，早上没看赛题，中午就有点跟不上了，建议固定时间。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>路过的风</b><span>11-05</span></div><p>聚集地讨论挺热闹，但有些说法太主观了，规则还是得自己看一遍才踏实。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>阿茶不喝茶</b><span>11-05</span></div><p>新手指引那块写得还行，至少知道先看什么后看什么，不至于一进来就懵。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>键盘上的灰</b><span>11-04</span></div><p>入口稳定性比想象中重要，之前存了个旧地址打不开，白折腾半天。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>橘子汽水</b><span>11-04</span></div><p>往期结果回看这个功能挺实用，能大致判断赛题难度，不会盲目投入太多时间。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>深夜写代码</b><span>11-03</span></div><p>说实话每日大赛不适合所有人，时间碎片化的人容易焦虑，量力而行吧。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>不困的鱼</b><span>11-03</span></div><p>移动端体验比预期好，卡片单列之后反而更好读，通勤路上刷一刷挺方便。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>林间小径</b><span>11-02</span></div><p>聚集地的讨论氛围不错，能看到不同思路，比一个人闷头想有意思多了。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>慢半拍选手</b><span>11-02</span></div><p>规则解析要是能再细一点就好了，有些提交细节还是得去官方页面确认。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>云上散步</b><span>11-01</span></div><p>收藏了，每天打开看一眼速览就知道今天要不要参与，省了不少搜索时间。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>薄荷味的风</b><span>11-01</span></div><p>希望入口分类能再稳定一些，有时候改版之后老用户会找不到原来的位置。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>打盹的狮子</b><span>10-31</span></div><p>评论区别全信，自己试一次比看十篇经验帖都管用，亲测。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>纸飞机的梦</b><span>10-31</span></div><p>每日更新那块摘要写得挺克制，没有夸张，看起来比较舒服。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>晚风与灯</b><span>10-30</span></div><p>作为观望党，看完深度解析大概知道这个赛事适不适合自己了，感谢整理。</p></div>
+      <div class="rs-cm"><div class="rs-cm-h"><b>一颗小石头</b><span>10-30</span></div><p>聚集地人多的时候讨论质量会下降，建议错峰看，早上和深夜反而更清净。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rs-sec" id="rs-news">
+  <div class="wrap">
+    <h2 class="rs-h2">赛事资讯与延伸阅读</h2>
+    <p class="rs-sub">围绕每日大赛、入口变化与聚集地动态的资讯整理。</p>
+    <div class="rs-news">
+      <article class="rs-new"><span>2026-11-07</span><h4>每日大赛入口页结构调整，分类更靠前</h4><p>本次调整主要影响移动端浏览顺序，入口按钮位置提前，减少滚动次数，对新手更友好。</p></article>
+      <article class="rs-new"><span>2026-11-06</span><h4>聚集地讨论热度上升，复盘帖明显增多</h4><p>随着每日赛题更新，玩家复盘和思路分享的帖子增加，讨论区信息量变大，建议按需筛选。</p></article>
+      <article class="rs-new"><span>2026-11-05</span><h4>往期结果归档补全，支持按日期回看</h4><p>归档模块补充了此前缺失的日期记录，方便新玩家了解赛题方向与难度变化。</p></article>
+      <article class="rs-new"><span>2026-11-04</span><h4>新手指引更新，补充首次浏览顺序建议</h4><p>针对首次接触每日大赛的用户，新增了从速览到规则再到讨论的建议路径。</p></article>
+      <article class="rs-new"><span>2026-11-03</span><h4>移动端阅读体验优化，卡片间距调整</h4><p>小屏设备上的卡片改为单列展示，文字密度下降，长时间阅读更轻松。</p></article>
+      <article class="rs-new"><span>2026-11-02</span><h4>常见问题扩充，新增提交时间相关答疑</h4><p>FAQ 补充了关于提交时间差和入口失效处理的问题，覆盖更多实际使用场景。</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rs-footer">
+  <div class="wrap">
+    <div class="rs-foot-grid">
+      <div>
+        <h4>MDRS聚集地</h4>
+        <p>围绕 r星每日大赛 mdrs 聚集地入口的信息聚合页，提供入口分类、赛程速览、规则解析与社区讨论参考。</p>
+        <p>本站不提供任何非官方通道，所有参赛信息以官方页面为准。</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <a href="/#rs-hero">首页速览</a>
+        <a href="/#rs-hot">热门赛事</a>
+        <a href="/#rs-update">每日更新</a>
+        <a href="/#rs-cat">入口分类</a>
+        <a href="/#rs-faq">常见问题</a>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <a href="/#rs-deep">深度解析</a>
+        <a href="/#rs-guide">参赛指南</a>
+        <a href="/#rs-comment">玩家评论</a>
+        <a href="/#rs-news">赛事资讯</a>
+        <a href="/#rs-intro">内容简介</a>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <a href="/#rs-hot">每日赛程导航</a>
+        <a href="/#rs-cat">入口分类总览</a>
+        <a href="/#rs-comment">聚集地讨论区</a>
+        <a href="/#rs-news">赛事动态</a>
+        <a href="/#rs-faq">答疑中心</a>
+      </div>
+    </div>
+    <div class="rs-copy">
+      © 2026 MDRS聚集地 · r星每日大赛mdrs聚集地入口专题页　|　本站内容为信息整理与导航说明，不构成任何形式的官方承诺<br>
+      免责声明：页面中涉及的赛程、热度、评论与数据均为模拟展示，仅用于内容结构说明；实际入口与规则请以官方发布为准。
+    </div>
+  </div>
+</footer>
+
+</body>
+        </html>
